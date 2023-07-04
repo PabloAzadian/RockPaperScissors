@@ -1,0 +1,83 @@
+.Characters {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+.Characters button {
+    margin: 50px;
+    font-size: 40px;
+    border: 10px solid #804cea;
+    color: aliceblue;
+    background-color:#804cea; 
+}
+
+.Characters img {
+    width: 250px;
+    height: 250px;
+    align-self: center;
+    background-color: #0b4d99;
+}
+
+.Selected {
+    display: flex;
+    flex-direction: column;
+    margin: 150px;
+    font-size: 40px;
+    border: 10px solid #804cea;
+    color: aliceblue;
+    background-color:#0b4d99; 
+    height: 1000px;
+    text-align: center;
+    justify-content: center;
+    width: 800px;
+}
+
+.Selected p{
+    background-color: #0b4d99; 
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.Selected img {
+    width: 350px;
+    height: 350px;
+    align-self: center;
+    background-color: #0b4d99;
+}
+
+.Selected button {
+    
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000000;
+    width: 220px;
+    height: 80px;
+    font-size:50px;
+    background-color: #804cea;
+    color: aliceblue;
+    align-self: center;
+}
+
+
+
+
+
+
+.Characters p {
+    background-color:#804cea; 
+}
+
+.container {
+    display: flex;
+}
+
+h2 {
+    color:rgb(132, 46, 146);
+    text-align: center;
+    font-size: 80px;
+  }

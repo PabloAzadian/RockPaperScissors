@@ -10,6 +10,8 @@ const ScoreComponent = ({score}) => {
         <h1>Score:</h1>
         <div className="score-component">
          <h1>Player: {score.player}</h1>
+         <span></span>
+         <span></span>
          <h1>Computer: {score.computer}</h1>
         </div>
     </div>

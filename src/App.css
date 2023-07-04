@@ -1,4 +1,33 @@
 h1 {
-  color:darksalmon;
+  color:rgb(242, 221, 245);
   text-align: center;
 }
+
+.header {
+  background-color: #804cea;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  /* margin-top: 0; */
+  font-size: 52px;
+  justify-self: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #804cea;
+}
+
+.header-container button{
+
+  background-color: #804cea;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 0;
+  font-size: 52px;
+}
+
+
+

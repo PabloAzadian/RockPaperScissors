@@ -6,6 +6,12 @@
     /* background-color: aqua; */
   }
 
+  .choice-container img {
+    width: 250px;
+    height: 180px;
+    
+  }
+
   .player-container {
     display: flex;
     flex-direction: row;
@@ -32,14 +38,17 @@
     align-items: center;
     margin-bottom: 1rem;
     justify-self: flex-end;
-    border: 3px solid rgb(163, 75, 75);
+    border: 10px solid #804cea;
   }
 
   .userBox img {
     width: 200px;
     height: 200px;
     border: 1px solid black;
+    background-color: rgb(201, 197, 197);
+    color:rgb(95, 144, 214)
   }
+  
   
   
  
@@ -48,11 +57,13 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 1rem;
+    color: aliceblue;
+    font-size: 25px;
   }
   
   .chosen-item img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
   }
   .choice-buttons {
     display: flex;
@@ -70,11 +81,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #804cea;
+    color: aliceblue;
+    font-size: 18px;
   }
   
   .choice-buttons button img {
     width: 60px;
     height: 60px;
+    background-color: #804cea;
   }
   
   .choice-buttons button span {

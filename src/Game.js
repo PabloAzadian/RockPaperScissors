@@ -4,7 +4,9 @@ import ResultComponent from './ResultComponent';
 import ScoreComponent from './ScoreComponent';
 import "./Game.css"
 
-const Game = () => {
+
+
+const Game = (player) => {
   // Defining the states of the Game
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
@@ -35,6 +37,7 @@ const Game = () => {
     })
     setPlayerChoice(null);
     setComputerChoice(null);
+    setResult("Choose your weapon!");
 
   }
 
@@ -46,6 +49,7 @@ const Game = () => {
   }
   const playerWin = () => {
     setResult("You win!");
+    
     setScore((prevScore) => ({
       ...prevScore,
       player: prevScore.player + 1,
@@ -65,7 +69,7 @@ const Game = () => {
   
 
   const determineResult = () => {
-    if (computerChoice === playerChoice) {
+    if (computerChoice === playerChoice && playerChoice) {
       setResult("It's a tie!");
     } else {
       switch (computerChoice) {
@@ -97,12 +101,11 @@ const Game = () => {
   };
     
       
-
+    
     return (
         <div>
-          <h1 className='header'>Rock Paper Scissors</h1>
           <ScoreComponent score={score}/>
-          <ChoiceButtons gameEnded={gameEnded} onPlayerChoice={handlePlayerChoice} playerChoice={playerChoice} computerChoice={computerChoice}/>
+          <ChoiceButtons player={player} gameEnded={gameEnded} onPlayerChoice={handlePlayerChoice} playerChoice={playerChoice} computerChoice={computerChoice}/>
           <ResultComponent result={result}/>
           <div className='gameEnd'>
             {gameEnded && <p>The game has ended! {score.player === 3 ? 'Player' : 'Computer'} won!</p>}
@@ -110,6 +113,7 @@ const Game = () => {
           </div>
         </div>
     );
+    
 };
 
 export default Game;

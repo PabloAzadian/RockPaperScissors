@@ -1,9 +1,14 @@
 .result-component {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-align: center;
   }
   
   .result-text {
     font-size: 24px;
     font-weight: bold;
+  }
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChoiceButtons.css';
 
-const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice }) => {
+const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice, currentPlayer }) => {
   const handleClick = (choice) => {
     onPlayerChoice(choice);
   }
@@ -12,7 +12,7 @@ const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice
       name: "Rock"
     },
     paper: {
-      src: "https://www.iconpacks.net/icons/2/free-paper-plane-icon-2563-thumb.png",
+      src: "https://cdn.pixabay.com/photo/2014/04/02/16/16/hand-306759_640.png",
       name: "Paper"
     },
     scissors: {
@@ -38,20 +38,21 @@ const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice
     <div>
       <div className="choice-container">
         <div className='player-container'>  
-          <div className='userBox'>
+          <div style={{backgroundColor: "rgb(95, 144, 214)"}} className='userBox'>
             <img src={images.player.src} />
-            <h1>{images.player.name}</h1>
+            <h1 style={{backgroundColor: "rgb(95, 144, 214)"}}>{images.player.name}</h1>
           </div>
         
           <div className="chosen-item">
             
-          {playerChoice && ( <img src={images[playerChoice].src} alt={images[playerChoice].name} />)}
+            {playerChoice && ( <img src={images[playerChoice].src} alt={images[playerChoice].name} />)}
             <p>{playerChoice}</p>
 
           </div>
         
         </div>
-        <h2>VS</h2>
+        {/* Imagen de versus */}
+        <img src="https://png.pngtree.com/png-vector/20221217/ourmid/pngtree-creative-vs-versus-logo-fonts-png-image_6527425.png" />
 
         <div className='computer-container'>
         
@@ -61,9 +62,9 @@ const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice
             <p>{computerChoice}</p>
           </div>
         
-          <div className='userBox'>
+          <div style={{backgroundColor: "rgb(203, 87, 87)"}} className='userBox'>
             <img src={images.computer.src} />
-            <h1>{images.computer.name}</h1>
+            <h1 style={{backgroundColor: "rgb(203, 87, 87)"}}>{images.computer.name}</h1>
           </div>
         </div>
       </div>

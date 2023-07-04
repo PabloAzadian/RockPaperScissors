@@ -1,10 +1,15 @@
 /* Game Component */
+* {
+    background-color: #bb82f4;
+}
+
 .gameEnd {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-    background-color: #f0f0f0; /* Add your desired background color */
+    margin-top: 5px;
+     /* Add your desired background color */
+     text-align: center;
   }
   
   .gameEnd p {
@@ -12,33 +17,18 @@
   }
   
   .gameEnd button {
-    padding: 10px 20px;
+    padding: 20px 40px;
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    font-size: 20px;
   }
   
   .gameEnd button:hover {
     background-color: #45a049;
   }
   
-  /* Header Style */
-  .header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  .header p {
-    font-size: 18px;
-  }
-  
+ 
