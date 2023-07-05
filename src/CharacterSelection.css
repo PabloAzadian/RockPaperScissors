@@ -6,10 +6,12 @@
     justify-items: center;
     justify-content: center;
     flex-direction: row;
+    margin-top: 10px;
+
   }
 
 .Characters button {
-    margin: 50px;
+    margin: 20px;
     font-size: 40px;
     border: 10px solid #804cea;
     color: aliceblue;
@@ -26,12 +28,12 @@
 .Selected {
     display: flex;
     flex-direction: column;
-    margin: 150px;
+    margin: 100px;
+    margin-top: 20px;
     font-size: 40px;
     border: 10px solid #804cea;
     color: aliceblue;
     background-color:#0b4d99; 
-    height: 1000px;
     text-align: center;
     justify-content: center;
     width: 800px;
@@ -41,6 +43,7 @@
     background-color: #0b4d99; 
     font-size: 60px;
     font-weight: bold;
+    margin: 15px;
 }
 
 .Selected img {
@@ -48,6 +51,7 @@
     height: 350px;
     align-self: center;
     background-color: #0b4d99;
+    margin: 20px;
 }
 
 .Selected button {
@@ -80,4 +84,5 @@ h2 {
     color:rgb(132, 46, 146);
     text-align: center;
     font-size: 80px;
+    margin:20px;
   }

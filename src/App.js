@@ -9,27 +9,27 @@ import userEvent from '@testing-library/user-event';
 function App() {
   
   const [active, setActive] = useState("Character");
-  const [player, setPLayer] = useState({name: "", img: ""})
-  
+  const [selectedChar, setSelectedChar] = useState({name: "", src: ""})
 
-  // <div className="Selected">
-  //               <p>Selected character:</p>
-  //               <img src={currentPlayer.img}/>
-  //               <p>{currentPlayer.name}</p>
-  //               {playerSelected && (<button onClick={() => setEnablePlay(true)}>Go Play</button>)}
-  // </div>
-  
+  const onSelectSceneHandler = (scene) => {
+    setActive(scene);
+  };
+
+  const onSelectCharacterHandler = (name, src) => {
+    setSelectedChar(
+      {
+        name: name ,
+        src: src
+      });
+  }
 
   return (
     <div>
       <div className='header-container'>
-        <button onClick={() => setActive("Character")}> Character</button>
         <h1 className='header'>Rock Paper Scissors</h1>
-        <button onClick={() =>setActive("Game")}> Game</button>
       </div>
-      
-      {active==="Character" && <CharacterSelection /*player={player}*//>} 
-      {active==="Game" && <Game /*player={player}*//>}
+      {active==="Character" && <CharacterSelection onSelectCharacter={onSelectCharacterHandler} onSelectScene={onSelectSceneHandler} />} 
+      {active==="Game" && <Game onSelectScene={onSelectSceneHandler} selectedChar={selectedChar} />}
 
     </div>
   );

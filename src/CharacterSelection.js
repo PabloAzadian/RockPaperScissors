@@ -41,6 +41,8 @@ const characterList = {
     const [enablePlay, setEnablePlay] = useState(false);
     const handleClick = (character) => {
         setCurrentPLayer(() => ({name:character.name, img: character.src}))
+        props.onSelectCharacter(character.name, character.src);
+        
       }
 
     useEffect(() => {
@@ -48,6 +50,11 @@ const characterList = {
           setPlayerSelected(true);
         }
     }, [currentPlayer]);
+
+    const handleButtonClick = () => {
+      props.onSelectScene("Game");
+    }
+    
 
     
     return (
@@ -60,6 +67,7 @@ const characterList = {
                 <p>Selected character:</p>
                 <img src={currentPlayer.img}/>
                 <p>{currentPlayer.name}</p>
+                {playerSelected &&(<button onClick={handleButtonClick}>Go Play!</button>)}
                 
         </div>
         <div className="Characters">

@@ -71,6 +71,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 20px;
+    
   }
   
   .choice-buttons button {
@@ -95,4 +96,13 @@
   .choice-buttons button span {
     margin-top: 10px;
     text-align: center;
+  }
+
+  .choice-buttons button:hover {
+    background-color:rgb(93, 216, 103)
+    
+  }
+
+  .choice-buttons button img:hover {
+    background-color:rgb(93, 216, 103)
   }

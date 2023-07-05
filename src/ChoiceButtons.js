@@ -1,7 +1,7 @@
 import React from 'react';
 import './ChoiceButtons.css';
 
-const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice, currentPlayer }) => {
+const ChoiceButtons = ({ selectedChar, onPlayerChoice, gameEnded, playerChoice, computerChoice, currentPlayer }) => {
   const handleClick = (choice) => {
     onPlayerChoice(choice);
   }
@@ -39,8 +39,8 @@ const ChoiceButtons = ({ onPlayerChoice, gameEnded, playerChoice, computerChoice
       <div className="choice-container">
         <div className='player-container'>  
           <div style={{backgroundColor: "rgb(95, 144, 214)"}} className='userBox'>
-            <img src={images.player.src} />
-            <h1 style={{backgroundColor: "rgb(95, 144, 214)"}}>{images.player.name}</h1>
+            <img src={selectedChar.src} />
+            <h1 style={{backgroundColor: "rgb(95, 144, 214)"}}>{selectedChar.name}</h1>
           </div>
         
           <div className="chosen-item">

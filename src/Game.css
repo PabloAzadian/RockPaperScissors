@@ -14,6 +14,8 @@
   
   .gameEnd p {
     margin-bottom: 10px;
+    font-size: 30px;
+    color: rgb(232, 223, 240);
   }
   
   .gameEnd button {
@@ -25,6 +27,7 @@
     cursor: pointer;
     transition: background-color 0.2s;
     font-size: 20px;
+    margin: 5px;
   }
   
   .gameEnd button:hover {

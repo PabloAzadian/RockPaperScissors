@@ -6,7 +6,7 @@ import "./Game.css"
 
 
 
-const Game = (player) => {
+const Game = (props) => {
   // Defining the states of the Game
   const [playerChoice, setPlayerChoice] = useState(null);
   const [computerChoice, setComputerChoice] = useState(null);
@@ -66,6 +66,10 @@ const Game = (player) => {
     
   }
 
+  const handleButtonClick = () => {
+    props.onSelectScene("Character");
+  }
+
   
 
   const determineResult = () => {
@@ -105,11 +109,14 @@ const Game = (player) => {
     return (
         <div>
           <ScoreComponent score={score}/>
-          <ChoiceButtons player={player} gameEnded={gameEnded} onPlayerChoice={handlePlayerChoice} playerChoice={playerChoice} computerChoice={computerChoice}/>
+          <ChoiceButtons selectedChar={props.selectedChar} gameEnded={gameEnded} onPlayerChoice={handlePlayerChoice} playerChoice={playerChoice} computerChoice={computerChoice}/>
           <ResultComponent result={result}/>
           <div className='gameEnd'>
-            {gameEnded && <p>The game has ended! {score.player === 3 ? 'Player' : 'Computer'} won!</p>}
-            {gameEnded && <button onClick={resetGame}>Play again?</button>}
+            {gameEnded && <div className='gameEnd'>
+                            <p>The game has ended! {score.player === 3 ? 'Player' : 'Computer'} won!</p> 
+                            <button onClick={resetGame}>Play again?</button> 
+                            <button onClick={handleButtonClick}>Back to Character selection</button>
+                          </div>}
           </div>
         </div>
     );
