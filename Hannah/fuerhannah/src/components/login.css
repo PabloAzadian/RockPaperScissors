@@ -1,0 +1,49 @@
+.login-container{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    margin: auto;
+    background-image: url(../images/whitebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    margin-top:5rem;
+    gap: 1rem;
+    max-width: 800px;
+    border-radius: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+.form input{
+    height: 50%;
+}
+.login-button{
+    gap: 1rem
+}
+
+.login-button button {
+    background-color: #A92324;
+    border: none;
+    padding: 0.5rem 2rem;
+    color: aliceblue;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.login-button h4{
+    color: #A92324;
+}
+
+.text-container{ 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

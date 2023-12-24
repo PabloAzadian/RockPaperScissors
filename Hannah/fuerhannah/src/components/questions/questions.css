@@ -1,0 +1,33 @@
+.question-container{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    margin: auto;
+    background-image: url(../../images/whitebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+    margin-top:5rem;
+    gap: 1rem;
+    width: 90%;
+    border-radius: 50px;
+}
+
+.question-container img{
+    margin: auto;
+}
+
+.card{
+    cursor: pointer;
+}
+
+
+.choice-button button {
+    background-color: #A92324;
+    border: none;
+    padding: 0.5rem 2rem;
+    color: aliceblue;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    width: 250px;
+}
